@@ -29,4 +29,8 @@ Simple door access management via Belgian Indentity card on RaspberryPi
 
     python3 cardsite/manage.py runserver 0.0.0.0:8000 &
     ./pidoor.py
-    
+
+Access management site at http://raspberry_ip:8000/admin/ via Firefox or IE (java needed, so, no Chrome...)
+from a computer with a Beid reader.
+
+Encode some users and grant them access or not, then try the cards into the RPi's reader
