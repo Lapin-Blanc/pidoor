@@ -1,12 +1,10 @@
 ## pidoor
 Simple door access management via Belgian Indentity card on RaspberryPi
 
-### Installation
+
+### Pyscard installation
 
     sudo apt-get -y update && sudo apt-get -y upgrade
-
-### installation pyscard...
-
     sudo apt-get -y install swig libpcsclite-dev libacr38u python3-setuptools build-essential python3-pip git
     git clone https://github.com/LudovicRousseau/pyscard.git
     cd pyscard
@@ -26,5 +24,9 @@ Simple door access management via Belgian Indentity card on RaspberryPi
     python3 cardsite/manage.py makemigrations
     python3 cardsite/manage.py migrate
     python3 cardsite/manage.py createsuperuser
-    python3 cardsite/manage.py runserver 0.0.0.0:8000 &
 
+### Testing
+
+    python3 cardsite/manage.py runserver 0.0.0.0:8000 &
+    ./pidoor.py
+    
