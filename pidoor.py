@@ -9,8 +9,8 @@ import Adafruit_CharLCD
 from pythonbeid.beid import scan_readers, read_infos, triggered_decorator
 from RPi import GPIO as gpio
 
-RED_LED = 4
-GREEN_LED = 18
+RED_LED = 26
+GREEN_LED = 27
 
 # retrieve a list of available readers
 r = scan_readers()[0]
@@ -48,6 +48,7 @@ def card_insterted(action, card, reader=r.name):
                 gpio.output(RED_LED, True)
                 gpio.output(GREEN_LED, False)
                 lcd.clear()
+                lcd.message(prenom + " " + nom + "\nAccess denied...")
 
 @triggered_decorator
 def card_removed(action, card, reader=r.name):
