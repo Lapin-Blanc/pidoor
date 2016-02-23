@@ -9,8 +9,8 @@ import Adafruit_CharLCD
 from pythonbeid.beid import scan_readers, read_infos, triggered_decorator
 from RPi import GPIO as gpio
 
-RED_LED = 26
-GREEN_LED = 27
+RED_LED = 13
+GREEN_LED = 22
 
 # retrieve a list of available readers
 r = scan_readers()[0]
